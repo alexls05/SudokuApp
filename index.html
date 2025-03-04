@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,118 +9,15 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    <p>Hello World!</p>
-    <table id="grid" border="1" style="border-collapse: collapse;">
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
+    <h1>Sudoku</h1>
+    <hr>
+    <h2 id="timer">0:00</h2>
 
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-             
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-
-        <tr class="row">
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-            <td class="cell"><input type="text" maxlength="1"></td>
-        </tr>
-</table>
+    <div id="sudoku-board"></div>
+    <br>
+    <div id="digits"></div>
 </body>
+
 </html>
