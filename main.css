@@ -21,18 +21,21 @@ hr {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .tile {
-    width: 48px;
-    height: 48px;
-    border: 1px solid lightgray;
+    width: 46px;
+    height: 47px;
+    border: 1px solid gray;
 
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 #digits {
@@ -43,13 +46,16 @@ hr {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .number {
-    width: 44px;
-    height: 44px;
-    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
     margin: 2px;
 
     font-size: 20px;
@@ -57,8 +63,46 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    
 }
 
-.number-selected {
+.tile-selected {
     background-color: yellow;
+}
+
+.given-tile {
+    background-color: lightgray;
+}
+
+.bottom-border-black {
+    border-bottom: 4px solid black;
+}
+
+.right-border-black {
+    border-right: 4px solid black;
+}
+
+.left-border-black {
+    border-left: 4px solid black;
+}
+
+.top-border-black {
+    border-top: 4px solid black;
+}
+
+.bottom-border-darkgray {
+    border-bottom: 4px solid gray;
+}
+
+.right-border-darkgray {
+    border-right: 4px solid gray;
+}
+
+.left-border-darkgray {
+    border-left: 4px solid gray;
+}
+
+.top-border-darkgray {
+    border-top: 4px solid gray;
 }
