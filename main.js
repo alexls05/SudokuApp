@@ -16,7 +16,7 @@ async function newBoard(){
     const data = await API.json();
 
     board = (data.newboard.grids)[0].value;
-    sol = data.solution;
+    sol = (data.newboard.grids)[0].solution;
 
     fillBoard(board);
 
@@ -24,6 +24,8 @@ async function newBoard(){
         console.error("Fetching error:", error)
         throw error;
     }
+
+    beginTimer();
 
     return board;
 }
@@ -84,6 +86,9 @@ function setGame(){
                 if(isFinite(event.key) & event.key != 0){
                     if(tile.classList.contains("tile-selected")){
                         tile.innerText = (event.key).toString();
+                        if(checkBoard()){
+                            gameFinish();
+                        }
                     }
                 } else if (event.key == "Backspace" || event.key == "Delete"){
                     if(tile.classList.contains("tile-selected")){
@@ -100,7 +105,6 @@ function selectTile(){
         tileSelected.classList.remove("tile-selected");
     tileSelected = this;
     tileSelected.classList.add("tile-selected");
-    curBoard = getBoard();
 }
 
 function fillBoard(boardInfo){
@@ -138,10 +142,37 @@ function checkBoard() {
 
     for(let r = 0; r < 9; r++){
         for (let c = 0; c < 9; c++){
-            if(curBoard[r][c] != sol[r][c])
+            if(curBoard[r][c] != sol[r][c]){
+                console.log(curBoard[r][c] + "!=" + sol[r][c])
                 return false;
+            }
         }
     }
 
     return true;
+}
+
+function gameFinish(){
+    endTimer();
+}
+
+function beginTimer(){
+    timer = setInterval(function(){
+        let time = document.getElementById("timer").innerText;
+        let timeArray = time.split(':');
+        if (timeArray[1] < 59)
+            (timeArray[1])++;
+        else {
+            (timeArray[0])++;
+            timeArray[1] = "00";
+        }
+         if(timeArray[1] < 10)
+            timeArray[1] = "0" + timeArray[1].toString();
+        document.getElementById("timer").innerText = timeArray[0] + ":" + timeArray[1];
+    }, 1000);
+}
+
+function endTimer(){
+    window.clearInterval(timer);
+    console.log("You finsihed with a time of: " + document.getElementById("timer").innerText);
 }
